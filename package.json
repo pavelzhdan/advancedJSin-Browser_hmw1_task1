@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "Pavel Zhdanovich <zhdan21@gmail.com>",
+  "homepage": "https://pavelzhdan.github.io/advancedJSin-Browser_hmw1_task1",   
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.10.1",
@@ -14,6 +15,7 @@
     "eslint": "^7.2.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.21.2",
+    "gh-pages": "^3.0.0",
     "html-webpack-plugin": "^4.3.0",
     "jest": "^26.0.1",
     "mini-css-extract-plugin": "^0.9.0",
@@ -30,7 +32,9 @@
     "preshow:coverage": "npm run coverage",
     "show:coverage": "live-server coverage/lcov-report",
     "preshow:dist": "npm run build",
-    "show:dist": "live-server dist"
+    "show:dist": "live-server dist",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "html-loader": "^1.1.0"
